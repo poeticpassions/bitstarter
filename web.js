@@ -1,17 +1,26 @@
 var express = require('express');
 var fs = require('fs');
+var fileContentStr = '';
+fs.readFile('./index.html', function (err, data) {
+  if (err) throw err;
+  console.log ('file contents: ' + data.toString());
+  fileContentStr = data.toString();
+//  response.send(data.toString());
+});
+
+
 
 var app = express.createServer(express.logger());
 console.log ('hello');
 app.get('/', function(request, response) {
 
-response.send('hello test');
-fs.readFile('./index.html', function (err, data) {
+response.send(fileContentStr);
+/*fs.readFile('./index.html', function (err, data) {
   if (err) throw err;
 console.log ('file contents: ' + data.toString());
   response.send(data.toString());
 });
-
+*/
 //  response.send('Hello World 2!');
 });
 
