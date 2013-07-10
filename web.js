@@ -9,7 +9,7 @@ if (err) throw err;`
 
 response.send(data);
 
-}
+});
 
 #  response.send('Hello World 2!');
 });
