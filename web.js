@@ -6,12 +6,12 @@ console.log ('hello');
 app.get('/', function(request, response) {
 
 response.send('hello test');
-/*fs.readFile('./index.html', function (err, data) {
+fs.readFile('./index.html', function (err, data) {
   if (err) throw err;
 console.log ('file contents: ' + data.toString());
   response.send(data.toString());
 });
-*/
+
 //  response.send('Hello World 2!');
 });
 
