@@ -14,6 +14,9 @@ var app = express.createServer(express.logger());
 console.log ('hello');
 app.get('/', function(request, response) {
 
+//img local
+app.use(express.static('/home/ubuntu/bitstarter'));
+
 response.send(fileContentStr);
 /*fs.readFile('./index.html', function (err, data) {
   if (err) throw err;
